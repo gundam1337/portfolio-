@@ -1,1 +1,0 @@
-self.__RSC_SERVER_MANIFEST="{\"node\":{\"f682112bcf7b815300f3b69e46ce5580ef281091\":{\"workers\":{\"app/page\":8075},\"layer\":{\"app/page\":\"sc_action\"}}},\"edge\":{}}"
