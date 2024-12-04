@@ -1,4 +1,3 @@
-// components/Intro.tsx
 "use client";
 
 import Image from "next/image";
@@ -19,7 +18,6 @@ export default function Intro() {
 
   type Language = keyof typeof content;
 
-
   const content = {
     en: {
       greeting: "Hello, I'm Omar.",
@@ -38,10 +36,10 @@ export default function Intro() {
       greeting: "Bonjour, je suis Omar.",
       description: (
         <>
-          Je suis un <span className="font-bold">développeur full-stack</span> avec{" "}
-          <span className="font-bold">2 ans</span> d'expérience. J'aime créer des{" "}
-          <span className="italic">sites & applications</span>. Ma spécialité est{" "}
-          <span className="underline">React (Next.js)</span>.
+          Je suis un <span className="font-bold">développeur full-stack</span>{" "}
+          avec <span className="font-bold">2 ans</span> d'expérience. J'aime
+          créer des <span className="italic">sites & applications</span>. Ma
+          spécialité est <span className="underline">React (Next.js)</span>.
         </>
       ),
       contactMe: "Contactez-moi ici",
@@ -49,7 +47,8 @@ export default function Intro() {
     },
   };
 
-  const { greeting, description, contactMe, downloadCV } = content[language as Language];
+  const { greeting, description, contactMe, downloadCV } =
+    content[language as Language];
 
   return (
     <section
@@ -68,12 +67,12 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://i.postimg.cc/QCzChSFm/Whats-App-Image-2024-11-27-at-16-43-55.jpg"
+              src="/profile.jpeg" // Path relative to the public folder
               alt="Omar Derkoaui"
-              width="211"
-              height="211"
-              quality="95"
-              priority={true}
+              width={211}
+              height={211}
+              quality={95}
+              priority={true} // Ensures the image loads immediately for better performance
               className="h-26 w-26 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
