@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "@nextui-org/react";
+import { FaReact } from "react-icons/fa";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -36,6 +38,12 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+
+          {/* Add the NextUI Button here */}
+          <Button className="mt-4 bg-[#FFA500] text-white hover:bg-[#cc8400] hover:scale-105 transition-transform duration-200 flex items-center justify-center">
+            <FaReact className="mr-2" />
+            Show More
+          </Button>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li

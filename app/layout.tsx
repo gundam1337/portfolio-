@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -8,13 +10,11 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { LanguageContextProvider } from "@/context/language-context";
+import { NextUIProvider } from "@nextui-org/react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Omar | Personal Portfolio",
-  description: "Omar is a full-stack developer with 2 years of experience.",
-};
 
 export default function RootLayout({
   children,
@@ -30,13 +30,15 @@ export default function RootLayout({
         <ThemeContextProvider>
           <LanguageContextProvider>
             <ActiveSectionContextProvider>
-              <Header />
-              {children}
-              <Footer />
+              <NextUIProvider>
+                <Header />
+                {children}
+                <Footer />
 
-              <Toaster position="top-right" />
-              <ThemeSwitch />
-              <LanguageSwitch />
+                <Toaster position="top-right" />
+                <ThemeSwitch />
+                <LanguageSwitch />
+              </NextUIProvider>
             </ActiveSectionContextProvider>
           </LanguageContextProvider>
         </ThemeContextProvider>

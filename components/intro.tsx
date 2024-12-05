@@ -14,10 +14,16 @@ import { useLanguage } from "@/context/language-context";
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  type Language = 'en' | 'fr';
   const { language } = useLanguage();
+  const lang: Language = (language === 'en' || language === 'fr') ? language : 'en';
 
-  type Language = keyof typeof content;
 
+  const cvLinks: { [key in "en" | "fr"]: string } = {
+    en: "/cv-en.pdf",
+    fr: "/cv-fr.pdf",
+  };
   const content = {
     en: {
       greeting: "Hello, I'm Omar.",
@@ -109,7 +115,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href={cvLinks[lang]}
           download
         >
           {downloadCV}{" "}
