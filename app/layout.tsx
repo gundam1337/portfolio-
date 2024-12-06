@@ -10,7 +10,6 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { LanguageContextProvider } from "@/context/language-context";
-import { NextUIProvider } from "@nextui-org/react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,15 +29,12 @@ export default function RootLayout({
         <ThemeContextProvider>
           <LanguageContextProvider>
             <ActiveSectionContextProvider>
-              <NextUIProvider>
                 <Header />
                 {children}
                 <Footer />
-
                 <Toaster position="top-right" />
                 <ThemeSwitch />
                 <LanguageSwitch />
-              </NextUIProvider>
             </ActiveSectionContextProvider>
           </LanguageContextProvider>
         </ThemeContextProvider>

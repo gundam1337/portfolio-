@@ -3,9 +3,9 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, FaBriefcase } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { MdSchool } from "react-icons/md";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import matchaImg from "@/public/matchaImg.png";
+import raytracingImg from "@/public/raytracingImg.png";
+import fractolImg from "@/public/fractolImg.png";
 
 export const links = [
   { name: "Home", hash: "#home" },
@@ -68,29 +68,80 @@ export const experiencesData = [
   },
 ];
 
-export const projectsData = [
-  {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
-  },
-  {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting, and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count, and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-  },
-];
+// export const projectsData = [
+//   {
+//     title: "Matcha",
+//     description:
+//       "A full-stack dating app with real-time chat, user preferences, and geolocation features. Built during a coding bootcamp.",
+//     tags: ["Node.js", "Express", "React", "Socket.IO", "MongoDB"],
+//     imageUrl: matchaImg, // Replace with actual image import or path
+//   },
+//   {
+//     title: "Raytracing with C",
+//     description:
+//       "A project focused on creating a raytracing engine entirely in C, showcasing advanced graphics programming techniques.",
+//     tags: ["C", "Graphics", "Math"],
+//     imageUrl: raytracingImg, // Replace with actual image import or path
+//   },
+//   {
+//     title: "Fract'ol 1337",
+//     description:
+//       "A project visualizing fractals with zooming and color manipulation, developed for a coding bootcamp.",
+//     tags: ["C", "Graphics", "Fractals", "Algorithms"],
+//     imageUrl: fractolImg, // Replace with actual image import or path
+//   },
+// ];
+
+
+export const projectsData = {
+  en: [
+    {
+      title: "Matcha",
+      description:
+        "A full-stack dating app with real-time chat, user preferences, and geolocation features. Built during a coding bootcamp.",
+      tags: ["Node.js", "Express", "React", "Socket.IO", "MongoDB"],
+      imageUrl: matchaImg,
+    },
+    {
+      title: "Raytracing with C",
+      description:
+        "A project focused on creating a raytracing engine entirely in C, showcasing advanced graphics programming techniques.",
+      tags: ["C", "Graphics", "Math"],
+      imageUrl: raytracingImg,
+    },
+    {
+      title: "Fract'ol 1337",
+      description:
+        "A project visualizing fractals with zooming and color manipulation, developed for a coding bootcamp.",
+      tags: ["C", "Graphics", "Fractals", "Algorithms"],
+      imageUrl: fractolImg,
+    },
+  ],
+  fr: [
+    {
+      title: "Matcha",
+      description:
+        "Une application de rencontre full-stack avec messagerie instantanée, préférences utilisateur et fonctionnalités de géolocalisation, développée lors d'un bootcamp.",
+      tags: ["Node.js", "Express", "React", "Socket.IO", "MongoDB"],
+      imageUrl: matchaImg,
+    },
+    {
+      title: "Raytracing en C",
+      description:
+        "Un projet visant à créer un moteur de lancer de rayons entièrement en C, mettant en avant des techniques avancées de programmation graphique.",
+      tags: ["C", "Graphiques", "Mathématiques"],
+      imageUrl: raytracingImg,
+    },
+    {
+      title: "Fract'ol 1337",
+      description:
+        "Un projet de visualisation de fractales avec zoom et manipulation des couleurs, développé pendant un bootcamp.",
+      tags: ["C", "Graphiques", "Fractales", "Algorithmes"],
+      imageUrl: fractolImg,
+    },
+  ],
+};
+
 
 export const skillsData = [
   "HTML",
@@ -102,14 +153,11 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Redux",
   "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
 ];
