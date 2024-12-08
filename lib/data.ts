@@ -92,6 +92,7 @@ export const experiencesData = [
 //   },
 // ];
 
+//to add I should add the front 
 
 export const projectsData = {
   en: [
