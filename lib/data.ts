@@ -161,4 +161,7 @@ export const skillsData = [
   "PostgreSQL",
   "Python",
   "Framer Motion",
+  "c++",
+  "c",
+  
 ];
